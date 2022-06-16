@@ -80,9 +80,9 @@
     }
     #topsecond{
         width:100%;
-        height:70px;
+        height:30px;
         display: flex;
-        padding: 80px 50px 80px 50px;
+        padding: 60px 50px 60px 50px;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f));
         background-image: linear-gradient(to bottom, #318FFB, #06f);
         border-bottom: 1px solid #5CA4FD;
