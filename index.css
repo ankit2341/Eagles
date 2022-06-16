@@ -70,9 +70,9 @@
     }
     #logo img{
         width:350px;
-        height:100px;
-        border-radius: 60px;
-        border-style: hidden;
+        height:90px;
+        border-radius: 90px;
+        border:none;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f));
         background-image: linear-gradient(to bottom, #318FFB, #06f);
         image-resolution: 1080px;
