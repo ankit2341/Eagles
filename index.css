@@ -6,6 +6,9 @@
         font-family: "Open Sans", sans-serif !important;
         font-size: 14px;
     }
+   
+    /* -------------------------------------header----------------------------------------------------- */
+
     #language{
           width:20px;
           background-image: -webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f));
@@ -139,6 +142,9 @@
     #top{
         position: sticky;
     }
+
+  /* -----------------------------------------deal of the day---------------------------------------------------- */
+
     section{
         width:90%;
         height: 500px;
@@ -267,6 +273,9 @@
         color: black;
         background-color: aquamarine;
      }
+
+ /* ---------------------------------------------------trending------------------------------------------ */
+
      #trending{
         width:90%;
         height: 400px;
@@ -306,6 +315,9 @@
         font-size: 16px;
         font-weight: bold;
      }
+
+     /* -------------------------------------------------new for you--------------------------------.--- */
+
      #newforyou{
         width:90%;
         height: 370px;
@@ -357,6 +369,10 @@
      #newforyou h2{
         margin-left:10px ;
      }
+
+
+     /* -------------------------------------------bestseller---------------------------------------- */
+
      #bestseller{
         width: 90%;
         height: 380px;
@@ -406,6 +422,10 @@
         height: 250px;
         padding: 10px 10px 10px 10px;
      }
+
+
+     /* -----------------------------------------------------popular Brand----------------------------------- */
+
     #popularbrand{
         width:90%;
         height: 940px;
@@ -463,6 +483,10 @@
         padding: 0px 20px 0px 10px;
         margin-top: 5px;
      }
+
+
+     /* -----------------------------------recommended--------------------------------------- */
+
      #recommended{
         width: 90%;
         height: 150px;
@@ -482,6 +506,11 @@
         border: 1px solid #e0e6ef;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
+
+
+  /* ---------------------------------------footer----------------------------------------------------- */
+
+
     #whyyoushop{
         width: 100%;
         height: 50px;
@@ -598,6 +627,7 @@
         height: 40px;
     }
 
+    /* ---------------------------------------------footer end------------------------------------------- */
     
 
     
