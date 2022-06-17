@@ -134,3 +134,26 @@ function pagechange2(){
   }
 }
 
+
+
+// --------------------------------------------------onscrolling navbar----------------------------------------------------------
+
+
+window.onscroll = function() {scrollFunction()};
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 790 || document.documentElement.scrollTop > 790) {
+    document.getElementById("topsecond2").style.top="0px";
+    document.getElementById("navbar").style.top = "250px";
+  } else {
+    document.getElementById("topsecond2").style.top="-130px";
+    document.getElementById("navbar").style.top= "-400px";
+  }
+}
+
+
+
+
+// --------------------------------------------------onscrolling navbar----------------------------------------------------------
+
