@@ -43,14 +43,15 @@
         width:60%;
     }
     #topinput{
-        width:600px;
-        height: 50px;
+        width:500px;
+        height: 45px;
         text-align: center;
         border: none ;
+       
     }
     #topinput1{
-        width:200px;
-        height:50px;
+        width:230px;
+        height:45px;
         text-align: center;
         border: none ;
         
@@ -58,16 +59,16 @@
     }
     #topinput2{
         display: flex;
-        width:600px;
-        height: 80px;
+        width:730px;
+        height: 45px;
         justify-content: center;
         align-items: center;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 100px;
+        margin-right: 30px;
         background-color: white;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f));
         background-image: linear-gradient(to bottom, #318FFB, #06f);
-        padding-left: 30px;
+        padding-left: 0px;
 
     }
     #logo img{
