@@ -161,9 +161,160 @@ function scrollFunction() {
 // ------------------------------------------------add to cart----------------------------------------------
 
 
+let productData=[{name:"BLUETOOTH AV5.0 4MAH",url:"https://img.gkbcdn.com/p/2019-08-27/tronsmart-t2-plus-20w--bluetooth-5-0-speaker-tws-1571994588089._w280_p1_.jpg",
+h2:"2656.58"},
+{name:"BLUETOOTH QCY T3 Bluetooth TWS Earphones",url:"https://img.gkbcdn.com/p/2019-01-31/tronsmart-element-mega-bluetooth-speaker-black-1571991584812._w280_p1_.jpg",
+h2:"3546.58"},
+{name:"BLUETOOTH AV5.0 Mouse",url:"https://img.gkbcdn.com/p/2021-11-29/razer-deathadder-essential-optical-gaming-mouse-black-aa9d23-1638169302886._w280_p1_.jpg",
+h2:"2476.58"},
+{name:"BLUETOOTH QCY T4 Bluetooth TWS Earphones",url:"https://img.gkbcdn.com/p/2020-04-22/sabbat-e12-bluetooth-5-0-tws-earphone-gunmetal-1587519936946._w280_p1_.jpg",
+h2:"4546.58"},
+{name:"PlayStation 5.0 avH 6.0",url:"https://img.gkbcdn.com/p/2021-07-20/e8d982f4f76e4c109aff2227fedaaa18-461408-1._w280_p1_.jpg",
+h2:"84000.58"},
+{name:"Bluetooth speaker 5.0 avH 6.0",url:"https://img.gkbcdn.com/p/2022-04-16/tronsmart-trip-10w-portable-bluetooth-5-3-speaker-e792fc-1650097262177._w280_p1_.jpg",
+h2:"1609.58"},
+{name:"BLUETOOTH Speaker 4.0",url:"https://img.gkbcdn.com/p/2019-03-18/tronsmart-element-t6-plus-bluetooth-speaker-black-1574132869322._w280_p1_.jpg",
+h2:"4876.58"},
+{name:"BLUETOOTH setup 3.0",url:"https://img.gkbcdn.com/p/2021-12-09/3-7V-108-Lamp-Beads-Solar-Wall-Lamp-480326-0._w280_p1_.jpg",
+h2:"1526.58"},
+];
 
-let cartofgeeks=localStorage.getItem("cartofgeeks")||[];
 
-function AddtoCart(){
-  
+let cartData=JSON.parse(localStorage.getItem("cartData"))||[];
+
+function AddtoCart1(){
+   console.log(event.target.parentNode.innerText);
+   
+   let obj={
+      td1:productData[0].url,
+      td2:productData[0].h2,
+      td3:"1",
+      td4:"Delete",
+   }
+
+   alert("Added");
+
+   cartData.push(obj);
+   localStorage.setItem("cartData",JSON.stringify(cartData));
+
 }
+
+function AddtoCart2(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[1].url,
+     td2:productData[1].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart3(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[2].url,
+     td2:productData[2].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart4(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[3].url,
+     td2:productData[3].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart5(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[4].url,
+     td2:productData[4].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart6(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[5].url,
+     td2:productData[5].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart7(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[6].url,
+     td2:productData[6].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart8(){
+  console.log(event.target.parentNode.innerText);
+  
+  let obj={
+     td1:productData[7].url,
+     td2:productData[7].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+

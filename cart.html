@@ -8,7 +8,7 @@
 </head>
 <style>
      #topsecond{
-        width:100%;
+        width:98%;
         height:30px;
         display: flex;
         padding: 60px 50px 60px 50px;
@@ -33,21 +33,42 @@
         justify-content: space-evenly;
     }
     table{
-        width:90%;
-        margin: auto;
-    }
-    table thead{
+        width:80%;
+        height:auto;
+        margin: auto;text-align: center;
         color: #999;
         background-color: #f1f1f1; 
-        height: 40px;
     }
-    table thead th{
-        width: 15%;
+    table tbody{
+        color: rgb(97, 96, 96);
     }
+    table thead{
+        width: 20%;
+        height: 100px;
+        margin-top: 50px;
+    }
+    table tbody tr{
+        width: 20%;
+        height: 100px;
+        margin-top: 30px;
+    }
+    table tbody img{
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    table tbody .delete:hover{
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    
     
 
 </style>
-<body>
+<body background="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074076.jpg?w=2000">
     <div id="topsecond">
         <div id="logo">
             <img src="https://mail.google.com/mail/u/0?ui=2&ik=85469e48a0&attid=0.1&permmsgid=msg-a:r-4548662600750322919&th=1816c30313e64413&view=att&disp=safe&realattid=1816c300eefa0d7cba71" alt="">
@@ -58,16 +79,13 @@
            <div style="margin-left:0px;width:150px;">Secure Checkout</div>
         </div>
     </div>
-    <div id="shopcart">
-
-    </div>
     <table>
         <thead>
             <tr>
-                <th style="width:40%">Product Name and Details</th>
+                <th style="width:300px;">Product image</th>
                 <th>Unit price</th>
                 <th>Quantity</th>
-                <th>Total</th>
+                <th>Operation</th>
                 <th>Operation</th>
             </tr>
         </thead>
@@ -75,9 +93,71 @@
             <!-- ---------------append your op here--------------------- -->
         </tbody>
     </table>
-    <script>
-        
-    </script>
     
+   
 </body>
 </html>
+<script>
+
+    let cartData=JSON.parse(localStorage.getItem("cartData"))||[];
+
+    location.reload;
+
+    
+
+   cartData.forEach(function(el){
+    let tr=document.createElement("tr");
+
+    let div=document.createElement("div");
+
+    let td1=document.createElement("img");
+    td1.src=el.td1;
+    
+    let td2=document.createElement("td");
+    td2.innerText=el.td2;
+    let td3=document.createElement("td");
+    td3.innerText=el.td3;
+    let td4=document.createElement("td");
+    td4.setAttribute("class","delete")
+    td4.innerText="Delete";
+    td4.style.backgroundColor="red";
+    td4.style.color="black";
+    td4.setAttribute("onClick","deleteData()");
+
+    let td5=document.createElement("td");
+    td5.innerText="Buy Now";
+    td5.setAttribute("class","delete")
+    td5.setAttribute("onClick","paymentpage()");
+    
+    td5.style.backgroundImage="-webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f))";
+    td5.style.backgroundImage="linear-gradient(to bottom, #318FFB, #06f)";
+    td5.style.color="black";
+    td4.setAttribute("href","payment.htm");
+
+    tr.append(td1,td2,td3,td5,td4);
+
+    document.querySelector("tbody").append(tr);
+   })
+
+
+   function deleteData(){
+    let cartData=[];
+
+      event.target.parentNode.remove();
+      cartData.filter(function(el){
+        return el.parentNode==event.target.parentNode;
+      })
+      localStorage.setItem("cartData",JSON.stringify(cartData));
+   }
+
+
+
+   function paymentpage(){
+       window.open("Payment.html","_blank")
+   }
+
+
+
+
+
+</script>
