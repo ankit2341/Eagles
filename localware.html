@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localware</title>
+    <style>
+        #container{
+      display: flex;
+      width: 95%;
+      margin: auto;   
+    }
+    #container>div:nth-child(1){
+      
+        width: 20%;
+        padding-left: 20px;
+    }
+    .Local{
+        padding: 20px;
+        border: 1px solid rgb(196, 200, 206);
+    }
+    #container>div:nth-child(2){
+      
+         width: 100%; 
+        margin-left: 20px; 
+        
+    }
+    #container>div:nth-child(2)>div:nth-child(1){
+      
+        height: 150px;
+    }
+    #container>div:nth-child(2)>div:nth-child(2){
+      
+        height: auto;
+        margin-top: 20px;
+        display: grid;
+    }
+    #cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    #cards>div{
+        /* border: 1px solid red; */
+        padding: 15px;
+    }
+    #cards>div:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #cards>div>img:nth-child(1){
+      width: 30%;
+      height: auto;
+      margin-right: 5px;
+      justify-content: right;
+      
+    }
+    #cards>div>img:nth-child(1){
+     
+       width:100%
+       
+    }
+    #cards>div>img:nth-child(2){
+        width:30%;
+        top: 10;
+    }
+    #num{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        width: 20%;
+        margin: auto;
+        height: 50px;
+       
+        margin-top: 25px;
+    }
+    #num>div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgb(107, 111, 112);
+        color: grey;
+        width: 15%;
+        height: 80%;  
+        cursor: pointer; 
+        border-radius: 5px;
+    }
+    #num>div:hover{
+        color: white;
+        background-color: blue;
+    }
+    #container>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 80%; */
+        margin: auto;
+        margin-top: 70px;
+       
+    }
+    #container>div:nth-child(2)>div:nth-child(1)>div>div>input{
+        width: 15%;
+        height: 20px;
+        text-align: center;
+    }
+    #container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2){
+      
+        display: flex;
+        /* width: 80%; */
+        margin: auto;
+        margin-top: 20px;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+    #container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div{
+        margin-left: 45px;
+    }
+    #container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div>button{
+        background-color: white;
+        border: 1px solid grey;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #container>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div>select{
+        height: 30px;
+        cursor: pointer;
+    }
+    #relatedProd{
+        display: flex;
+        margin-top: 20px;
+        height: 200px;
+    }
+    #relatedProd span{
+      margin-left: 10px;
+    }
+    #OK{
+      padding: 4px 8px 4px 8px;
+      border: 1px solid grey;
+      cursor: pointer;
+      background-color: white;
+      border-radius: 5px;
+    }
+    #OK:hover{
+      background-color: blue;
+    }
+    a{
+      text-decoration: none;
+      color: grey;
+      cursor: pointer;
+    }
+
+    </style>
+   
+</head>
+<body>
+    <div id="container">
+        <div>
+            <div><p><a href="index.html"> Home </a>/ <a href="localware.html"> Local Warehouse</a></p></div>
+            <div class="Local">
+                <h3>Local Warehouse</h3>
+                <p>EU Warehouse</p>
+                <p>PL Warehouse</p>
+                <p>DE Warehouse</p>
+                <p>ES Warehouse</p>
+                <p>IT Warehouse</p>
+                <p>CZ Warehouse</p>
+                <p>US Warehouse</p>
+                <p>GB Warehouse</p>
+                <p>NL Warehouse</p>
+                <p>CN Warehouse</p>
+                <p>HK Warehouse</p>
+                <p>BR Warehouse</p>
+                <p>CA Warehouse</p>
+                <p>SA Warehouse</p>
+                <p>IE Warehouse</p>
+                <p>JP Warehouse</p>
+                <p></p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <span>Filter:</span>
+                    </div>
+                   
+                    <div>
+                        <span><input id="CheckboxSell" type="checkbox"></span>
+                    <span>on sale</span>
+                    </div>
+                    <div>
+                        <span><input id="CheckboxFree" type="checkbox"></span>
+                        <span>Free shipping only</span>
+                    </div>
+                   <div>
+                    <span>Price:</span>
+                    <input id="MinPrice" type="number" placeholder="Min">
+                    <span>-</span>
+                    <input id="MaxPrice" type="number" placeholder="Max">
+                    <button id="OK">OK</button>
+                   </div>
+                   
+                    <!-- <input type="select"> -->
+                </div>
+                <div>
+                    <div>
+                        <span>Sort By:</span>
+                    </div>   
+                    <div>
+                     <button id="Best">Best Price</button>
+                     <button id="New">New Arrival</button>
+                     <select name="sortprice" id="sortbyPrice" onChange="handlePricesort()">
+                        <option value="">Price</option>
+                        <option value="Low to High">Low to High</option>
+                        <option value="High to Low">High to Low</option>
+                    </select>
+                    </div> 
+                </div>
+            </div>
+            <hr>
+            <div id="cards">
+                
+            </div>
+        </div>
+    </div>
+    <div id="num">
+        <div><</div>
+       <div>1</div>
+       <div>2</div>
+       <div>3</div>
+       <div>></div>
+    </div>
+    <h2> Related Recommendations</h2>
+    <div id="relatedProd">
+
+    </div>
+</body>
+</html>
+<script>
+ let Local=JSON.parse(localStorage.getItem("LocalWare"));
+
+// displayTable(Local)
+let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
+     let LocalWareprod=[
+         {
+          image:"https://img.gkbcdn.com/p/2019-08-09/kugoo-g-booster-electric-scooter-black-1574132343827._w280_p1_.jpg",
+          IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+          name: "KUGOO G-Booster Folding Electric Scooter Dual",
+          DiscountedPrice: "₹96332.60",
+          Price: "₹136894.75",
+          Button: "AddtoCart",
+          category:"on sell"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg",
+          IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+          name: "ELEGLIDE M1 PLUS Electric Mountain Bike",
+          DiscountedPrice: "₹65103.50",
+          Price: "₹85362.43",
+          Button: "AddtoCart",
+          category:"on sell"
+        },
+        {image:"https://img.gkbcdn.com/p/2017-11-25/mx3-l-m-backlight-voice-input-2-4ghz-wireless-air-mouse-1571989128244._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "MX3-L-M Backlight & Voice Input 6-Axis Gyro 2.4GHz",
+          DiscountedPrice: "₹1126.57",
+          Price: "₹1126.57",
+          Button: "AddtoCart",
+          category:"on sell"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-02-20/roborock-s7-robot-vacuum-cleaner-2500pa-powerful-suction-1613791182553._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Roborock S7 Robot Vacuum Cleaner with Sonic",
+          DiscountedPrice: "₹38652.06",
+          Price: "₹56367.95",
+          Button: "AddtoCart",
+          category:"on sell"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-09-16/Artillery-Sidewinder-X2-3D-Printer-472515-0._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Artillery Sidewinder X2 3D Printer, ABL Auto",
+          DiscountedPrice: "₹31324.93",
+          Price: "₹40182.87",
+          Button: "AddtoCart",
+          category:"Free Shipping only"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-07-16/JIMMY-HW8-Pro-Cordless-Wireless-Wet-Dry-Smart-Vacuum-Cleaner-461370-0._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "JIMMY PowerWash HW8 Pro Cordless Wet Dry",
+          DiscountedPrice: "₹16909.82",
+          Price: "₹32209.91",
+          Button: "AddtoCart",
+          category:"Free Shipping only"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-12-22/SCULPFUN-S9-Laser-Engraver-481991-0._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "SCULPFUN S9 5.5W Laser Engraver, 0.06mm",
+          DiscountedPrice: "₹23351.97",
+          Price: "₹32209.91",
+          Button: "AddtoCart",
+          category:"Free Shipping only"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-03-04/a95x-f3-air-ii-tv-box-4gb-ram-32gb-rom-5f0112-1646360005974._w280_.gif",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "A95X F3 Air II 4GB/32GB 4K AV1 TV BOX RGB Light",
+          DiscountedPrice: "₹3220.27",
+          Price: "₹4750.28",
+          Button: "AddtoCart",
+          category:"Free Shipping only"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-12-13/aovo-q7-folding-electric-scooter-8-5--350w-10-4ah-bms-battery-black-a100d6-1639394632942._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "AOVO ES80/M365 Pro Folding Electric Scooter",
+          DiscountedPrice: "₹24157.23",
+          Price: "₹29069.37",
+          Button: "AddtoCart",
+          category:"Free Shipping only"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-06-11/creality-ender-3-s1-3d-printer-a44434-1654948051152._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Creality Ender-3 S1 3D Printer, Sprite Dual-gear",
+          DiscountedPrice: "₹30599.38",
+          Price: "₹36961.80",
+          Button: "AddtoCart",
+          category:"Free Shipping only"
+        },
+        {image:"https://img.gkbcdn.com/p/2020-10-14/tronsmart-element-mega-pro-60w-bluetooth-5-0-speaker-1602637495048._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Tronsmart Element Mega Pro 60W Bluetooth 5.0 Speaker",
+          DiscountedPrice: "₹6199.76",
+          Price: "₹7246.61",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-01-20/rg351p-anbernic-retro-game-console-black-1611123134436._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "ANBERNIC RG351P 64GB Retro Game Console",
+          DiscountedPrice: "₹6682.92",
+          Price: "₹8051.87",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-upgraded-version-electric-bike-7-5ah-250w-motor-dark-blue-b23cd2-1650765670228._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "ELEGLIDE M1 Electric Bike Upgraded Version",
+          DiscountedPrice: "₹54957.13",
+          Price: "₹88577.87",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2019-12-05/TANIX-TX6S-Allwinner-H616-4GB-32GB-TV-Box-891088-._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "TANIX TX6S Allwinner H616 Android 10.0",
+          DiscountedPrice: "₹2898.16",
+          Price: "₹3783.95",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-03-14/Roborock-Q7-Max-Robot-Vacuum-Cleaner-497778-0._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Roborock Q7 Max Robot Vacuum Cleaner 2 In 1",
+          DiscountedPrice: "₹28183.57",
+          Price: "₹44286.52",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2019-11-30/tws-i500-earphones-20191130100234539._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Apods i500 Bluetooth 5.0 Pop-up Window",
+          DiscountedPrice: "₹804.46",
+          Price: "₹2012.36",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-04-16/tronsmart-bang-60w-outdoor-party-speaker-b5a77f-1650095218850._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Tronsmart Bang 60W Outdoor Party Speaker",
+          DiscountedPrice: "₹8052.68",
+          Price: "₹9662.41",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2022-06-11/creality-ender-3-s1-pro-3d-printer-14a8e9-1654948058503._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "Creality Ender-3 S1 Pro 3D Printer, Sprite Dual-gear",
+          DiscountedPrice: "₹40182.87",
+          Price: "₹48235.55",
+          Button: "AddtoCart"
+        },
+        {image:"https://img.gkbcdn.com/p/2021-07-16/JIMMY-HW8-Cordless-Wireless-Wet-Dry-Smart-Vacuum-Cleaner-461369-0._w280_p1_.jpg",
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+        name: "JIMMY PowerWash HW8 Cordless Wet Dry Smart",
+          DiscountedPrice: "₹11272.95",
+          Price: "₹40262.59",
+          Button: "AddtoCart"
+        },
+        {  
+          image:"https://img.gkbcdn.com/p/2022-03-04/a95x-f3-air-ii-tv-box-4gb-ram-32gb-rom-e3c795-1646360082943._w280_.gif",
+      
+        IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+          name: "A95X F3 Air II 4GB/32GB 4K AV1 TV BOX RGB Light",
+          DiscountedPrice: "₹3300.79",
+          Price: "₹4267.12",
+          Button: "AddtoCart"
+        }
+      
+    ]
+    let productsCont=document.getElementById("cards")
+    let checkSell=document.getElementById("CheckboxSell")
+    let checkFree=document.getElementById("CheckboxFree")
+    let Minprice=document.getElementById("MinPrice")
+    let Maxprice=document.getElementById("MaxPrice")
+    let Ok=document.getElementById("OK")
+    let best=document.getElementById("Best")
+    let New=document.getElementById("New")
+    let sort=document.getElementById("sortbyprice")
+    localware(LocalWareprod)
+    function localware(LocalWareprod){
+      LocalWareprod.forEach(function(el){
+        // creating child box
+        let box=document.createElement("div");
+        // creating img element
+        let pic= document.createElement("img");
+        pic.setAttribute("src",el.image);
+       //create IMG
+         pic2=document.createElement("img");
+         pic2.setAttribute("src",el.IMG);
+        // create h2
+        let ProductName=document.createElement("span");
+        ProductName.innerText=el.name;
+        // create DiscountedPrice
+        let DiscountedPrice=document.createElement("h2");
+        DiscountedPrice.innerText=el.DiscountedPrice;
+        // price
+        let Price=document.createElement("p");
+        Price.innerText=el.Price; 
+        // create button
+        let Add=document.createElement("button");
+        Add.innerText=el.Button;
+        Add.addEventListener("click", function(){
+      //  console.log(el)
+        add(el);
+     })
+        box.append(pic,pic2,ProductName,DiscountedPrice,Price,Add);
+        productsCont.append(box)
+        // document.querySelector("#cards").append(box)
+        localStorage.setItem("LocalWare", JSON.stringify(LocalWareprod));
+    })
+        LocalWareprod.forEach(function(el){
+        // creating child box
+        let box=document.createElement("div");
+        // creating img element
+        let pic= document.createElement("img");
+        pic.setAttribute("src",el.image);
+        // create h2
+        let ProductName=document.createElement("p");
+        ProductName.innerText=el.name;
+        // create DiscountedPrice
+        let DiscountedPrice=document.createElement("h3") ;
+          DiscountedPrice.innerText=el.DiscountedPrice;
+        // price
+        let Price=document.createElement("span");
+        Price.innerText=el.Price;
+        box.append(pic,ProductName,DiscountedPrice,Price);
+        document.querySelector("#relatedProd").append(box)
+        localStorage.setItem("relatedprod", JSON.stringify(LocalWareprod));
+    })
+    
+    }
+    
+    checkSell.addEventListener("click", function(){
+      productsCont.innerHTML="";
+      let checked=LocalWareprod.filter(function(element){
+        return element.category==="on sell"
+      })
+      localware(checked);
+      console.log(checked)
+    })
+    checkFree.addEventListener("click", function(){
+      productsCont.innerHTML="";
+      let checked=LocalWareprod.filter(function(element){
+        return element.category==="Free Shipping only";
+      })
+      localware(checked);
+      console.log(checked)
+    })
+    Ok.addEventListener("click", function(){
+      productsCont.innerHTML="";
+      let checked=LocalWareprod.filter(function(element){
+        return element.DiscountedPrice>= Minprice.value 
+        // return element.DiscountedPrice<= Maxprice.value
+      })
+      localware(checked);
+      console.log(checked)
+    })
+    function handlePricesort(){
+      console.log("x")
+      productsCont.innerHTML="";
+  let selected=document.querySelector("#sortbyPrice").value;
+   if(selected==="Low to High"){
+    LocalWareprod.sort(function(a,b){
+        return a.DiscountedPrice-b.DiscountedPrice;
+    })
+    localware(LocalWareprod)
+   }
+   if(selected==="High to Low"){
+    LocalWareprod.sort(function(a,b){
+        return b.DiscountedPrice-a.DiscountedPrice;
+    })
+    localware(LocalWareprod)
+    }
+  }
+   
+    function add(el){
+      Cartarr.push(el)
+      localStorage.setItem("Addtocart",JSON.stringify(Cartarr))
+    }
+</script>
