@@ -157,3 +157,13 @@ function scrollFunction() {
 
 // --------------------------------------------------onscrolling navbar----------------------------------------------------------
 
+
+// ------------------------------------------------add to cart----------------------------------------------
+
+
+
+let cartofgeeks=localStorage.getItem("cartofgeeks")||[];
+
+function AddtoCart(){
+  
+}
