@@ -110,7 +110,7 @@ function pagechange(){
   let select=document.querySelector("#top #topsecond #topinput2 #topinput1");
 
   if(select.value=="Local Warehouse"){
-    window.open("index.html","popup");
+    window.open("localware.html","popup");
   }
   else if(select.value=="Sports and outdoors"){
     window.open("index.html","popup");
