@@ -113,7 +113,7 @@ function pagechange(){
     window.open("localware.html","popup");
   }
   else if(select.value=="Sports and outdoors"){
-    window.open("index.html","popup");
+    window.open("","popup");
   }
   else if(select.value=="Smart home and Garden"){
     window.open("home_garden.html","popup");
@@ -124,10 +124,10 @@ function pagechange2(){
   let select=document.querySelector("#top #topthird #categories");
 
   if(select.value=="Local Warehouse"){
-    window.open("index.html","popup");
+    window.open("localware.html","popup");
   }
   else if(select.value=="Sports and outdoors"){
-    window.open("index.html","popup");
+    window.open("","popup");
   }
   else if(select.value=="Smart home and Garden"){
     window.open("home_garden.html","popup");
