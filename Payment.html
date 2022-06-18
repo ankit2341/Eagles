@@ -55,9 +55,9 @@
    
     <form action="">
         <label for=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M512 32C547.3 32 576 60.65 576 96V128H0V96C0 60.65 28.65 32 64 32H512zM576 416C576 451.3 547.3 480 512 480H64C28.65 480 0 451.3 0 416V224H576V416zM112 352C103.2 352 96 359.2 96 368C96 376.8 103.2 384 112 384H176C184.8 384 192 376.8 192 368C192 359.2 184.8 352 176 352H112zM240 384H368C376.8 384 384 376.8 384 368C384 359.2 376.8 352 368 352H240C231.2 352 224 359.2 224 368C224 376.8 231.2 384 240 384z"/></svg>.........CREDIT CARD / DEBIT CARD</label>
-        <input type="number" placeholder="XXXX  XXXX  XXXX  XXXX">
-        <input type="number" placeholder="CVV">
-        <input type="date" placeholder="VALIDITY">
+        <input type="number" placeholder="XXXX  XXXX  XXXX  XXXX" id="card">
+        <input type="number" placeholder="CVV" id="cvv">
+        <input type="date" placeholder="VALIDITY" id="val">
         <button onclick="OrderPlaced()">Proceed</button>
         <label for=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M243.4 2.587C251.4-.8625 260.6-.8625 268.6 2.587L492.6 98.59C506.6 104.6 514.4 119.6 511.3 134.4C508.3 149.3 495.2 159.1 479.1 160V168C479.1 181.3 469.3 192 455.1 192H55.1C42.74 192 31.1 181.3 31.1 168V160C16.81 159.1 3.708 149.3 .6528 134.4C-2.402 119.6 5.429 104.6 19.39 98.59L243.4 2.587zM256 128C273.7 128 288 113.7 288 96C288 78.33 273.7 64 256 64C238.3 64 224 78.33 224 96C224 113.7 238.3 128 256 128zM127.1 416H167.1V224H231.1V416H280V224H344V416H384V224H448V420.3C448.6 420.6 449.2 420.1 449.8 421.4L497.8 453.4C509.5 461.2 514.7 475.8 510.6 489.3C506.5 502.8 494.1 512 480 512H31.1C17.9 512 5.458 502.8 1.372 489.3C-2.715 475.8 2.515 461.2 14.25 453.4L62.25 421.4C62.82 420.1 63.41 420.6 63.1 420.3V224H127.1V416z"/></svg>.........NET BANKING</label>
         <select name="" id="">
@@ -66,7 +66,7 @@
             <option value="">SBI Bank</option>
             <option value="">Bank of America</option>
         </select>
-        <button onclick="OrderPlaced()">Proceed</button>
+        <button onclick="OrderPlaced1()">Proceed</button>
         <a href="cart.html" >Go Back</a>
     </form>
 
@@ -80,10 +80,21 @@
 let orders=JSON.parse(localStorage.getItem("orders"))||[];
 let cart=JSON.parse(localStorage.getItem("cartData"))||[];
 
+let card=document.querySelector("#card");
+let cvv=document.querySelector("#cvv");
+let val=document.querySelector("#val");
+
+
     function OrderPlaced(){
 
         event.preventDefault();
+        if(card.value==""||cvv.value==""||val.value==""){
+            alert("Fill the Details First");
+        }
 
+        else{
+                
+            
         if(window.confirm("Are you Sure about payment")){
             
             alert("Thank you for purchasing");   
@@ -96,6 +107,13 @@ let cart=JSON.parse(localStorage.getItem("cartData"))||[];
         else{
             window.open("cart.html");
         }     
+
+        }
+
+    }
+
+    function OrderPlaced1(){
+        alert("Only Cards Accepted for now sorry for incovinience");
     }
 
  

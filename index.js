@@ -318,3 +318,349 @@ function AddtoCart8(){
 
 }
 
+
+let Newforyou=[
+  {url:"https://img.gkbcdn.com/p/2022-06-07/C127-RC-Helicopter-2-4G-4CH-6-Axis-Gyro-720P-Camera-with-Remote-Contro-501582-0._w280_p1_.jpg",h2:"9662.89"},
+  {url:"https://img.gkbcdn.com/p/2022-05-27/xiaomi-mi-band-7-black-17e243-1653647543366._w280_p1_.jpg",h2:"4589.80"},
+  {url:"https://img.gkbcdn.com/p/2022-05-27/MEROCA-WR15-WR25-Cushion-mounting-bracket-501368-0._w280_p1_.jpg",h2:"9662.89"},
+  {url:"https://img.gkbcdn.com/p/2022-06-11/J2-Colorful-Flame-Diffuser-with-3D-Dynamic-Mist-502439-0._w280_p1_.jpg",h2:"9662.89"},
+  {url:"https://img.gkbcdn.com/p/2018-11-22/netac-n600s-1tb-ssd-2-5-inch-solid-state-drive-blue-1571991121689._w280_p1_.jpg",h2:"11457.78"},
+  {url:"https://img.gkbcdn.com/p/2022-05-23/68356b7ef7904bcd990edda141b5baa6-501236-0._w280_p1_.jpg",h2:"23456.6"},
+  {url:"https://img.gkbcdn.com/p/2019-07-11/qcy-t3--bluetooth-5-0-tws-earphone-3d-stereo-1574132285489._w280_p1_.jpg",h2:"2456.23"},
+  {url:"https://img.gkbcdn.com/p/2019-02-20/stmagic-spt31-512g-mini-portable-m-2-ssd-gray-1571995742585._w280_p1_.jpg",h2:"6038.70"},
+  {url:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg",h2:"65130.45"},
+  {url:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-upgraded-version-electric-bike-7-5ah-250w-motor-dark-blue-b23cd2-1650765670228._w280_p1_.jpg",h2:"54670.45"},
+  {url:"https://img.gkbcdn.com/p/2021-10-28/36v-10-4ah-removable-battery-for-eleglide-f1-electric-bike-1635406527480._w280_p1_.jpg",h2:"14530.45"},
+  {url:"https://img.gkbcdn.com/p/2021-10-28/36v-12-5ah-removable-battery-for-eleglide-m1-plus---m1-electric-bike-1635405942861._w280_p1_.jpg",h2:"11558.45"},
+  {url:"https://img.gkbcdn.com/p/2020-10-14/tronsmart-element-mega-pro-60w-bluetooth-5-0-speaker-1602637495048._w280_p1_.jpg",h2:"6900.45"},
+  {url:"https://img.gkbcdn.com/p/2020-01-09/Tronsmart-element-T6-plus-Upgrade-Black-895558-._w280_p1_.jpg",h2:"1670.44"},
+  {url:"https://img.gkbcdn.com/p/2021-10-12/tronsmart-splash-1-led-15w-bluetooth-speaker-1634038411944._w280_p1_.jpg",h2:"4530.25"},
+  {url:"https://img.gkbcdn.com/p/2020-12-09/Tronsmart-Apollo-Q10-ANC-Bluetooth-Headphones-Black-426941-0._w280_p1_.jpg",h2:"3050.15"},
+  {url:"https://img.gkbcdn.com/p/2021-02-20/roborock-s7-robot-vacuum-cleaner-2500pa-powerful-suction-1613791182553._w280_p1_.jpg",h2:"65130.45"},
+  {url:"https://img.gkbcdn.com/p/2022-03-14/Roborock-Q7-Max--Robot-Vacuum-Cleaner-497781-1._w280_p1_.jpg",h2:"54670.45"},
+  {url:"https://img.gkbcdn.com/p/2020-05-29/roborock-s5-max-robot-vacuum-cleaner-international-version-black-1590736089662._w280_p1_.jpg",h2:"33530.45"},
+  {url:"https://img.gkbcdn.com/p/2020-05-13/roborock-h6-wireless-handheld-vacuum-cleaner-space-silver-1589359148385._w280_p1_.jpg",h2:"25730.45"},
+];
+
+
+
+function AddtoCart11(){
+  
+  let obj={
+     td1:Newforyou[0].url,
+     td2:Newforyou[0].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart12(){
+  
+  let obj={
+     td1:Newforyou[1].url,
+     td2:Newforyou[1].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart13(){
+  
+  let obj={
+     td1:Newforyou[2].url,
+     td2:Newforyou[2].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart14(){
+  
+  let obj={
+     td1:Newforyou[3].url,
+     td2:Newforyou[3].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart15(){
+  
+  let obj={
+     td1:Newforyou[4].url,
+     td2:Newforyou[4].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart16(){
+  
+  let obj={
+     td1:Newforyou[5].url,
+     td2:Newforyou[5].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart17(){
+  
+  let obj={
+     td1:Newforyou[6].url,
+     td2:Newforyou[6].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart18(){
+  
+  let obj={
+     td1:Newforyou[7].url,
+     td2:Newforyou[7].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart19(){
+  
+  let obj={
+     td1:Newforyou[8].url,
+     td2:Newforyou[8].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart20(){
+  
+  let obj={
+     td1:Newforyou[9].url,
+     td2:Newforyou[9].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart21(){
+  
+  let obj={
+     td1:Newforyou[10].url,
+     td2:Newforyou[10].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart22(){
+  
+  let obj={
+     td1:Newforyou[11].url,
+     td2:Newforyou[11].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart23(){
+  
+  let obj={
+     td1:Newforyou[12].url,
+     td2:Newforyou[12].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart24(){
+  
+  let obj={
+     td1:Newforyou[13].url,
+     td2:Newforyou[13].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart25(){
+  
+  let obj={
+     td1:Newforyou[14].url,
+     td2:Newforyou[14].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart26(){
+  
+  let obj={
+     td1:Newforyou[15].url,
+     td2:Newforyou[15].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart27(){
+  
+  let obj={
+     td1:Newforyou[16].url,
+     td2:Newforyou[16].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart28(){
+  
+  let obj={
+     td1:Newforyou[17].url,
+     td2:Newforyou[17].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart29(){
+  
+  let obj={
+     td1:Newforyou[18].url,
+     td2:Newforyou[18].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
+function AddtoCart30(){
+  
+  let obj={
+     td1:Newforyou[19].url,
+     td2:Newforyou[19].h2,
+     td3:"1",
+     td4:"Delete",
+  }
+
+  alert("Added");
+
+  cartData.push(obj);
+  localStorage.setItem("cartData",JSON.stringify(cartData));
+
+}
+
