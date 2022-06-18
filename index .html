@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Home & Garden</title>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+
+		.imgcontainer {
+			width: 90%;
+			margin: auto;
+			
+			position: relative;
+			height: 300px;
+		}
+
+		.imgcontainer>img {
+			width: 100%;
+		}
+
+
+		.imgcontainer>button {
+			width: 50px;
+			position: absolute;
+			top: 120px;
+			background-color: rgba(77, 77, 77, 0.4);
+			font-size: 30px;
+
+			color: white;
+			height: 40px;
+		}
+
+		.imgcontainer>button:nth-child(2) {
+			right: 2px;
+		}
+
+		.imgcontainer>button:nth-child(3) {
+			left: 2px
+		}
+
+		#container {
+			width: 90%;
+			margin: 40px auto;
+			display: flex;
+		}
+
+		.left-container {
+			width: 450px;
+			height: fit-content;
+			min-width: fit-content;
+			margin-right: 1rem;
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+			padding: 20px 10px;
+			 margin-top: 10px; 
+		}
+
+		.left-container p {
+			padding: 8px 10px;
+			color: rgba(0, 0, 0, 0.8);
+			cursor: pointer;
+		}
+
+
+		.products {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px;
+		}
+
+		.products>div:hover {
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		.box {
+			position: relative;
+			min-width: 250px;
+			padding: 10px;
+			background-color: white;
+			border-radius: 10px;
+			cursor: pointer;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+
+		.box>p {
+			margin-bottom: 10px;
+		}
+
+		.show_img {
+			width: 90%;
+			display: block;
+			margin: auto;
+		}
+
+		.strike_price {
+			text-decoration: line-through;
+			color: #8c8c8c;
+		}
+
+		.label_img {
+			position: absolute;
+			width: 120px;
+			top: 2px;
+			right: 2px;
+			z-index: 10;
+		}
+
+		.favourite {
+			display: flex;
+			align-items: center;
+			margin-top: 10px;
+		}
+
+		.filter_list {
+			display: flex;
+			align-items: center;
+			margin: 30px 0;
+		}
+
+		.filter_list>.heading {
+			width: 100px;
+			font-size: 1.25rem;
+			color: rgba(0, 0, 0, 0.5)
+		}
+
+		.filter_list>.brands,
+		.sort_by {
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+			margin-right: 10px;
+			border-radius: 4px;
+		}
+
+		.filter_by {
+			margin-right: 20px;
+			box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+			padding: 10px;
+			min-width: 100px;
+			border-radius: 4px;
+		}
+
+		.filter_by.ship {
+			width: 200px;
+		}
+
+
+		.filter_list .sort_by {
+			min-width: 80px;
+			text-transform: capitalize;
+			font-weight: 500;
+			width: fit-content;
+			padding: 10px;
+		}
+
+		.filter_list>.brands>img {
+			width: 120px;
+			height: 50px;
+			display: block;
+			border-radius: 4px;
+		}
+
+		.favourite img {
+			width: 20px;
+			display: block;
+			margin-right: 10px;
+		}
+		button{
+			width: 200px;
+			height: 40px;
+			color: white;
+			border-radius: 10px;
+		    display: block;
+			margin: auto;
+            margin-bottom: 10px;
+		}
+		#home{
+			width: 500px;
+			margin-left: 95px;
+			color: grey;
+			font-size: 20px;
+			margin-top:10px;
+			cursor: pointer;
+		}
+		#home:hover {
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		}
+		
+
+	</style>
+</head>
+
+<body>
+
+
+   
+	<p id="home">
+		Home / smart Home & Garden  </p>
+	<div class="imgcontainer">
+		
+		<img id="carousel" src="https://img.gkbcdn.com/s3/c/2202/1210x220proscenic-620dbb802b40c92678295434.jpg" alt="">
+		<button> &gt; </button>
+		<button> &lt; </button>
+
+	</div>
+  
+  <div id="container">
+	<div class="left-container">
+		<h4>Smart Home & Garden</h4>
+		<p>Smart Home</p>
+		<p>kitchen & Dining</p>
+		<p>Health & Beauty </p>
+		<p>Patio, Lawn & Garden</p>
+		<p>Furniture</p>
+		<p>Home Decors</p>
+		<p>Lightning</p>
+		<p>Household Supplies</p>
+		<p>Bathroom Supplies</p>
+		<p>Pet Supplies</p>
+		<p>Office Supplies</p>
+		<p>Other Home Gadgets</p>
+		<p>Baby care</p>
+		<p>Bedding</p>
+		<p>Tools and Home</p>
+	</div>
+      <div class="right-container">
+
+			<div class="filter_fields">
+				<div class="filter_list">
+					<div class="heading">Brands: </div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/Logo/jimmy.jpg?v=-219567574" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/Logo/roborock.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/Logo/Viomi.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/xiaomi.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/2003/mijia.jpg?v=501322930" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/acgam.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/Logo/geekbes.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/Logo/philips.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/Logo/funry.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/proscenic-6HykTHuh.jpg" alt=""></div>
+					<div class="brands"><img src="https://img.gkbcdn.com/s3/b/kemei-6TQlfGG3.jpg" alt=""></div>
+				</div>
+				<div class="filter_list">
+					<div class="heading">Filter: </div>
+					<div class="filter_by ship">Ship From</div>
+					<div class="filter_by">
+						<input type="checkbox" name="" id="on_sale">
+						<label for="on_sale">On Sale</label>
+					</div>
+					<div class="filter_by">
+						<input type="checkbox" name="" id="on_sale">
+						<label for="on_sale">Free shipping only</label>
+					</div>
+				</div>
+				<div class="filter_list">
+					<div class="heading">Sort By: </div>
+					<div class="sort_by">best match</div>
+					<div class="sort_by">New Arrival</div>
+					<div class="sort_by">Price</div>
+				</div>
+			</div>
+
+			<div class="products"></div>
+		
+		</div>
+		
+
+
+
+
+</body>
+
+</html>
+<script src="./data.js"></script>
+<script>
+	let img = document.querySelector("#carousel")
+	let buttons = document.querySelectorAll("button")
+
+
+	let imgnum = 0
+	let imgarray = [
+		"https://img.gkbcdn.com/s3/c/2202/1210x220proscenic-620dbb802b40c92678295434.jpg",
+		"https://img.gkbcdn.com/s3/c/2206/1210x220HW10-62a3185a2b40c913ccae4dc9.jpg",
+		"https://img.gkbcdn.com/s3/c/2206/1210x220-62a319a42b40c913ccae4dca.jpg",
+		"https://img.gkbcdn.com/s3/c/2204/1210x220-624d3cd52b40c9123c56e8a3.jpg",
+		"https://img.gkbcdn.com/s3/c/2203/HealthCare1210x220-622800b92b40c92fec56c002.jpg",
+
+	]
+	buttons[0].addEventListener("click", function () {
+		if (imgnum === 0) {
+			imgnum = imgarray.length - 1
+		} else {
+			imgnum--
+		}
+		img.src = imgarray[imgnum]
+	})
+
+	img.src = imgarray[imgnum]
+
+	buttons[1].addEventListener("click", function () {
+		if (imgnum === imgarray.length - 1) {
+			imgnum = 0
+		} else {
+			imgnum++
+		}
+		img.src = imgarray[imgnum]
+	})
+
+    let cartLocalStorage=JSON.parse(localStorage.getItem("addcart")) || []
+    
+    displayproducts(data);
+
+	function displayproducts(data) {
+		const products = document.querySelector('.products')
+		products.innerHTML = null
+
+		data.forEach(function (element) {
+			let box = document.createElement("div")
+			box.classList.add("box")
+
+			let image = document.createElement("img")
+			image.classList.add('show_img')
+			image.src = element.lazy_img_src
+
+			let label_img = document.createElement("img")
+			label_img.classList.add('label_img')
+			label_img.src = element.label_img_src
+
+			let name = document.createElement("p")
+			let name_text = document.createTextNode(element.pro_title.substring(0, 60))
+			let name_span = document.createElement("span")
+			let name_span_image = document.createElement("img")
+			name_span_image.src = element.pro_ico_src
+			name_span.append(name_span_image)
+			name.append(name_span, name_text)
+
+			let price = document.createElement("p")
+			price.classList.add('price')
+			price.textContent = element.price
+
+			let strike_price = document.createElement('p')
+			strike_price.classList.add('strike_price')
+			strike_price.textContent = element.list_price
+
+			let reviews = document.createElement("p")
+			for (let i = 0; i < 4; i++) {
+				let star = document.createElement("img")
+				star.src = "https://content1.geekbuying.com/V1.4/en/images/indexV7/star2.png"
+				reviews.append(star)
+			}
+			let review_num = document.createElement("span")
+			review_num.textContent = element.review_num || 10
+			reviews.append(review_num)
+
+			let favourite = document.createElement("p")
+			favourite.classList.add('favourite')
+			let favourite_count = document.createElement("span")
+			let favourite_heart = document.createElement("img")
+			favourite_heart.src = './favourite-heart.png'
+			favourite_count.textContent = element.faviorite_count || 4
+			favourite.append(favourite_heart, favourite_count)
+			let button=document.createElement("button")
+            button.innerText="Add To Cart"
+            button.style.backgroundColor="#3949ab"
+			button.style.cursor="pointer"
+            button.addEventListener("click",function(){
+				          element.quantity = 1
+                   cartLocalStorage.push(element)
+                   localStorage.setItem('addcart',  JSON.stringify(cartLocalStorage));
+
+			})
+
+			box.append(image, label_img, name, price, strike_price, reviews, favourite,button)
+
+			products.append(box)
+		})
+	}
+	  
+
+</script>
