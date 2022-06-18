@@ -208,7 +208,8 @@ form.addEventListener("submit",function(){
     else if(checksignin(data.email,data.password)===true){
               signIn.push(data);
             localStorage.setItem("signIn",JSON.stringify(signIn));
-           alert("successful");           
+           alert("successful"); 
+           window.location.href="index.html"          
           }
           else{
               alert("Please Enter correct details");
