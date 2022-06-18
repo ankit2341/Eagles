@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localware</title>
+
+    <!------------------------------------------------- Style------------------------------------------------------- -->
     <style>
         #container{
       display: flex;
@@ -152,33 +154,36 @@
       color: grey;
       cursor: pointer;
     }
-
+   
     </style>
    
 </head>
+<!-------------------------------------------------------- Body ------------------------------------------------------>
 <body>
+
+
     <div id="container">
         <div>
             <div><p><a href="index.html"> Home </a>/ <a href="localware.html"> Local Warehouse</a></p></div>
             <div class="Local">
                 <h3>Local Warehouse</h3>
-                <p>EU Warehouse</p>
-                <p>PL Warehouse</p>
-                <p>DE Warehouse</p>
-                <p>ES Warehouse</p>
-                <p>IT Warehouse</p>
-                <p>CZ Warehouse</p>
-                <p>US Warehouse</p>
-                <p>GB Warehouse</p>
-                <p>NL Warehouse</p>
-                <p>CN Warehouse</p>
-                <p>HK Warehouse</p>
-                <p>BR Warehouse</p>
-                <p>CA Warehouse</p>
-                <p>SA Warehouse</p>
-                <p>IE Warehouse</p>
-                <p>JP Warehouse</p>
-                <p></p>
+                <p> <a href="localware.html">EU Warehouse</a></p>
+                <p> <a href="localware.html">PL Warehouse</a></p>
+                <p> <a href="localware.html">DE Warehouse</a></p>
+                <p> <a href="localware.html">ES Warehouse</a></p>
+                <p> <a href="localware.html">IT Warehouse</a></p>
+                <p> <a href="localware.html">CZ Warehouse</a></p>
+                <p> <a href="localware.html">US Warehouse</a></p>
+                <p> <a href="localware.html">GB Warehouse</a></p>
+                <p> <a href="localware.html">NL Warehouse</a></p>
+                <p> <a href="localware.html">CN Warehouse</a></p>
+                <p> <a href="localware.html">HK Warehouse</a></p>
+                <p> <a href="localware.html">BR Warehouse</a></p>
+                <p> <a href="localware.html">CA Warehouse</a></p>
+                <p> <a href="localware.html">SA Warehouse</a></p>
+                <p> <a href="localware.html">IE Warehouse</a></p>
+                <p> <a href="localware.html">JP Warehouse</a></p>
+               
             </div>
         </div>
         <div>
@@ -211,10 +216,10 @@
                         <span>Sort By:</span>
                     </div>   
                     <div>
-                     <button id="Best">Best Price</button>
-                     <button id="New">New Arrival</button>
+                     <button id="Best" onclick="DisplayBest()">Best Match</button>
+                     <button id="New" onclick="Arrival()">New Arrival</button>
                      <select name="sortprice" id="sortbyPrice" onChange="handlePricesort()">
-                        <option value="">Price</option>
+                        <option value="Price">Price</option>
                         <option value="Low to High">Low to High</option>
                         <option value="High to Low">High to Low</option>
                     </select>
@@ -240,11 +245,17 @@
     </div>
 </body>
 </html>
+
+<!-- //---------------------------------------------------- Script -------------------------------------------------- -->>
+
 <script>
  let Local=JSON.parse(localStorage.getItem("LocalWare"));
 
-// displayTable(Local)
-let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
+let Cartarr=JSON.parse(localStorage.getItem("cartofgeeks"))||[]
+let arr1=JSON.parse(localStorage.getItem("hello"))||[]
+ 
+      //  <<-------------------------------------------Array Of Objects------------------------------------------------->> 
+
      let LocalWareprod=[
          {
           image:"https://img.gkbcdn.com/p/2019-08-09/kugoo-g-booster-electric-scooter-black-1574132343827._w280_p1_.jpg",
@@ -252,143 +263,181 @@ let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
           name: "KUGOO G-Booster Folding Electric Scooter Dual",
           DiscountedPrice: "₹96332.60",
           Price: "₹136894.75",
+          price: "96332.60",
           Button: "AddtoCart",
-          category:"on sell"
+          category:"on sell",
+          Arrival:"1"
         },
         {image:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg",
           IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
           name: "ELEGLIDE M1 PLUS Electric Mountain Bike",
           DiscountedPrice: "₹65103.50",
           Price: "₹85362.43",
+          price: "65103.50",
           Button: "AddtoCart",
-          category:"on sell"
+          category:"on sell",
+          Arrival:"2"
         },
         {image:"https://img.gkbcdn.com/p/2017-11-25/mx3-l-m-backlight-voice-input-2-4ghz-wireless-air-mouse-1571989128244._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "MX3-L-M Backlight & Voice Input 6-Axis Gyro 2.4GHz",
           DiscountedPrice: "₹1126.57",
           Price: "₹1126.57",
+          price:"1126.57",
           Button: "AddtoCart",
-          category:"on sell"
+          category:"on sell",
+          Arrival:"3"
         },
         {image:"https://img.gkbcdn.com/p/2021-02-20/roborock-s7-robot-vacuum-cleaner-2500pa-powerful-suction-1613791182553._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Roborock S7 Robot Vacuum Cleaner with Sonic",
           DiscountedPrice: "₹38652.06",
           Price: "₹56367.95",
+          price:"38652.06",
           Button: "AddtoCart",
-          category:"on sell"
+          category:"on sell",
+          Arrival:"4"
         },
         {image:"https://img.gkbcdn.com/p/2021-09-16/Artillery-Sidewinder-X2-3D-Printer-472515-0._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Artillery Sidewinder X2 3D Printer, ABL Auto",
           DiscountedPrice: "₹31324.93",
           Price: "₹40182.87",
+          price:"31324.93",
           Button: "AddtoCart",
-          category:"Free Shipping only"
+          category:"Free Shipping only",
+          Arrival:"5"
         },
         {image:"https://img.gkbcdn.com/p/2021-07-16/JIMMY-HW8-Pro-Cordless-Wireless-Wet-Dry-Smart-Vacuum-Cleaner-461370-0._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "JIMMY PowerWash HW8 Pro Cordless Wet Dry",
           DiscountedPrice: "₹16909.82",
           Price: "₹32209.91",
+          price:"16909.82",
           Button: "AddtoCart",
-          category:"Free Shipping only"
+          category:"Free Shipping only",
+          Arrival:"6"
         },
         {image:"https://img.gkbcdn.com/p/2021-12-22/SCULPFUN-S9-Laser-Engraver-481991-0._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "SCULPFUN S9 5.5W Laser Engraver, 0.06mm",
           DiscountedPrice: "₹23351.97",
           Price: "₹32209.91",
+          price:"23351.97",
           Button: "AddtoCart",
-          category:"Free Shipping only"
+          category:"Free Shipping only",
+          Arrival:"7"
         },
         {image:"https://img.gkbcdn.com/p/2022-03-04/a95x-f3-air-ii-tv-box-4gb-ram-32gb-rom-5f0112-1646360005974._w280_.gif",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "A95X F3 Air II 4GB/32GB 4K AV1 TV BOX RGB Light",
           DiscountedPrice: "₹3220.27",
           Price: "₹4750.28",
+          price:"3220.27",
           Button: "AddtoCart",
-          category:"Free Shipping only"
+          category:"Free Shipping only",
+          Arrival:"8"
         },
         {image:"https://img.gkbcdn.com/p/2021-12-13/aovo-q7-folding-electric-scooter-8-5--350w-10-4ah-bms-battery-black-a100d6-1639394632942._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "AOVO ES80/M365 Pro Folding Electric Scooter",
           DiscountedPrice: "₹24157.23",
           Price: "₹29069.37",
+          price:"24157.23",
           Button: "AddtoCart",
-          category:"Free Shipping only"
+          category:"Free Shipping only",
+          Arrival:"9"
         },
         {image:"https://img.gkbcdn.com/p/2022-06-11/creality-ender-3-s1-3d-printer-a44434-1654948051152._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Creality Ender-3 S1 3D Printer, Sprite Dual-gear",
           DiscountedPrice: "₹30599.38",
           Price: "₹36961.80",
+          price:"30599.38",
           Button: "AddtoCart",
-          category:"Free Shipping only"
+          category:"Free Shipping only",
+          Arrival:"10"
         },
         {image:"https://img.gkbcdn.com/p/2020-10-14/tronsmart-element-mega-pro-60w-bluetooth-5-0-speaker-1602637495048._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Tronsmart Element Mega Pro 60W Bluetooth 5.0 Speaker",
           DiscountedPrice: "₹6199.76",
           Price: "₹7246.61",
-          Button: "AddtoCart"
+          price:"6199.76",
+          Button: "AddtoCart",
+          Arrival:"11"
         },
         {image:"https://img.gkbcdn.com/p/2021-01-20/rg351p-anbernic-retro-game-console-black-1611123134436._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "ANBERNIC RG351P 64GB Retro Game Console",
           DiscountedPrice: "₹6682.92",
           Price: "₹8051.87",
-          Button: "AddtoCart"
+          price:"6682.92",
+          Button: "AddtoCart",
+          Arrival:"12"
         },
         {image:"https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-upgraded-version-electric-bike-7-5ah-250w-motor-dark-blue-b23cd2-1650765670228._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "ELEGLIDE M1 Electric Bike Upgraded Version",
           DiscountedPrice: "₹54957.13",
           Price: "₹88577.87",
-          Button: "AddtoCart"
+          price:"54957.13",
+          Button: "AddtoCart",
+          Arrival:"13"
         },
         {image:"https://img.gkbcdn.com/p/2019-12-05/TANIX-TX6S-Allwinner-H616-4GB-32GB-TV-Box-891088-._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "TANIX TX6S Allwinner H616 Android 10.0",
           DiscountedPrice: "₹2898.16",
           Price: "₹3783.95",
-          Button: "AddtoCart"
+          price:"2898.16",
+          Button: "AddtoCart",
+          Arrival:"14"
         },
         {image:"https://img.gkbcdn.com/p/2022-03-14/Roborock-Q7-Max-Robot-Vacuum-Cleaner-497778-0._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Roborock Q7 Max Robot Vacuum Cleaner 2 In 1",
           DiscountedPrice: "₹28183.57",
           Price: "₹44286.52",
-          Button: "AddtoCart"
+          price:"28183.57",
+          Button: "AddtoCart",
+          Arrival:"15"
         },
         {image:"https://img.gkbcdn.com/p/2019-11-30/tws-i500-earphones-20191130100234539._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Apods i500 Bluetooth 5.0 Pop-up Window",
           DiscountedPrice: "₹804.46",
           Price: "₹2012.36",
-          Button: "AddtoCart"
+          price:"804.46",
+          Button: "AddtoCart",
+          Arrival:"16"
         },
         {image:"https://img.gkbcdn.com/p/2022-04-16/tronsmart-bang-60w-outdoor-party-speaker-b5a77f-1650095218850._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Tronsmart Bang 60W Outdoor Party Speaker",
           DiscountedPrice: "₹8052.68",
           Price: "₹9662.41",
-          Button: "AddtoCart"
+          price:"8052.68",
+          Button: "AddtoCart",
+          Arrival:"17"
         },
         {image:"https://img.gkbcdn.com/p/2022-06-11/creality-ender-3-s1-pro-3d-printer-14a8e9-1654948058503._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "Creality Ender-3 S1 Pro 3D Printer, Sprite Dual-gear",
           DiscountedPrice: "₹40182.87",
           Price: "₹48235.55",
-          Button: "AddtoCart"
+          price:"40182.87",
+          Button: "AddtoCart",
+          Arrival:"18"
         },
         {image:"https://img.gkbcdn.com/p/2021-07-16/JIMMY-HW8-Cordless-Wireless-Wet-Dry-Smart-Vacuum-Cleaner-461369-0._w280_p1_.jpg",
         IMG: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
         name: "JIMMY PowerWash HW8 Cordless Wet Dry Smart",
           DiscountedPrice: "₹11272.95",
           Price: "₹40262.59",
-          Button: "AddtoCart"
+          price:"11272.95",
+          Button: "AddtoCart",
+          Arrival:"19"
         },
         {  
           image:"https://img.gkbcdn.com/p/2022-03-04/a95x-f3-air-ii-tv-box-4gb-ram-32gb-rom-e3c795-1646360082943._w280_.gif",
@@ -397,20 +446,29 @@ let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
           name: "A95X F3 Air II 4GB/32GB 4K AV1 TV BOX RGB Light",
           DiscountedPrice: "₹3300.79",
           Price: "₹4267.12",
-          Button: "AddtoCart"
+          price:"3300.79",
+          Button: "AddtoCart",
+          Arrival:"20"
         }
       
     ]
+   
+    
+
     let productsCont=document.getElementById("cards")
     let checkSell=document.getElementById("CheckboxSell")
     let checkFree=document.getElementById("CheckboxFree")
-    let Minprice=document.getElementById("MinPrice")
-    let Maxprice=document.getElementById("MaxPrice")
+    // let Minprice=document.getElementById("MinPrice")
+    // let Maxprice=document.getElementById("MaxPrice")
     let Ok=document.getElementById("OK")
     let best=document.getElementById("Best")
     let New=document.getElementById("New")
     let sort=document.getElementById("sortbyprice")
+  
     localware(LocalWareprod)
+  
+   //  <<--------------------------All the div and other tags appended in this section------------------------------>> 
+  //  <<-----------------------------------ForEach HOF inside localware function------------------------------------>>
     function localware(LocalWareprod){
       LocalWareprod.forEach(function(el){
         // creating child box
@@ -429,7 +487,8 @@ let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
         DiscountedPrice.innerText=el.DiscountedPrice;
         // price
         let Price=document.createElement("p");
-        Price.innerText=el.Price; 
+        Price.innerText=el.Price;
+        Price.style.textDecoration="line-through" ;
         // create button
         let Add=document.createElement("button");
         Add.innerText=el.Button;
@@ -452,11 +511,14 @@ let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
         let ProductName=document.createElement("p");
         ProductName.innerText=el.name;
         // create DiscountedPrice
-        let DiscountedPrice=document.createElement("h3") ;
+        let DiscountedPrice=document.createElement("span") ;
           DiscountedPrice.innerText=el.DiscountedPrice;
+          DiscountedPrice.style.fontSize="25px"
+          DiscountedPrice.style.fontWeight="Bold"
         // price
         let Price=document.createElement("span");
         Price.innerText=el.Price;
+        Price.style.textDecoration="line-through" ;
         box.append(pic,ProductName,DiscountedPrice,Price);
         document.querySelector("#relatedProd").append(box)
         localStorage.setItem("relatedprod", JSON.stringify(LocalWareprod));
@@ -464,6 +526,8 @@ let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
     
     }
     
+
+    // <<-------------------------------------Function for checkbox on sell------------------------------------------>>
     checkSell.addEventListener("click", function(){
       productsCont.innerHTML="";
       let checked=LocalWareprod.filter(function(element){
@@ -472,43 +536,88 @@ let Cartarr=JSON.parse(localStorage.getItem("Addtocart"))||[]
       localware(checked);
       console.log(checked)
     })
+
+    // <<------------------------------------------Function for checkbox free delivary ----------------------------------------->>
     checkFree.addEventListener("click", function(){
       productsCont.innerHTML="";
       let checked=LocalWareprod.filter(function(element){
         return element.category==="Free Shipping only";
       })
       localware(checked);
-      console.log(checked)
+      // console.log(checked)
+      
     })
-    Ok.addEventListener("click", function(){
-      productsCont.innerHTML="";
+   
+    // <<--------------------------------------------function for price filter------------------------------------->>
+
+     Ok.addEventListener("click", function(){
+      // productsCont.innerHTML="";
+      console.log("x");
+      let obj1=  {
+     
+     Minprice:document.getElementById("MinPrice").value,
+     Maxprice:document.getElementById("MaxPrice").value
+     }
+      arr1.push(obj1)
+     
       let checked=LocalWareprod.filter(function(element){
-        return element.DiscountedPrice>= Minprice.value 
-        // return element.DiscountedPrice<= Maxprice.value
+        return element.DiscountedPrice== arr1.Minprice ;
       })
       localware(checked);
-      console.log(checked)
+       console.log(checked)
+       localStorage.setItem("hello", JSON.stringify(arr1))
     })
+  
+  // << ---------------------------------------function for Price sort ------------------------------------------------->>
     function handlePricesort(){
-      console.log("x")
+      // console.log("x")
       productsCont.innerHTML="";
-  let selected=document.querySelector("#sortbyPrice").value;
+     let selected=document.querySelector("#sortbyPrice").value;
+      console.log(selected)
+      if(selected==="Price"){
+      localware(LocalWareprod)
+     }
    if(selected==="Low to High"){
     LocalWareprod.sort(function(a,b){
-        return a.DiscountedPrice-b.DiscountedPrice;
+        return a.price-b.price;
+       
     })
     localware(LocalWareprod)
    }
    if(selected==="High to Low"){
     LocalWareprod.sort(function(a,b){
-        return b.DiscountedPrice-a.DiscountedPrice;
+        return b.price-a.price;
     })
     localware(LocalWareprod)
     }
   }
-   
+  // <<--------------------------------------------- Function for Best Price------------------------------------------------->>
+   function DisplayBest(){
+    // console.log("x")
+    // best.style.backgroundColor="blue";
+    // best.style.color="white";
+    productsCont.innerHTML="";
+      LocalWareprod.sort(function(a,b){
+        return b.price-a.price;
+        
+      })
+      console.log("mm")
+      localware(LocalWareprod)
+    }
+// <<-------------------------------------------Function for new arrival------------------------------------------------->
+  function Arrival(){
+    console.log("x") 
+    productsCont.innerHTML="";
+    // New.style.backgroundColor="blue";
+    // New.style.color="white";
+    LocalWareprod.sort(function(a,b){
+        return b.Arrival- a.Arrival;
+   })
+   localware(LocalWareprod)
+  }
+  // << ---------------------------------------------function for add to cart------------------------------------------->>
     function add(el){
       Cartarr.push(el)
-      localStorage.setItem("Addtocart",JSON.stringify(Cartarr))
+      localStorage.setItem("cartofgeeks",JSON.stringify(Cartarr))
     }
 </script>
