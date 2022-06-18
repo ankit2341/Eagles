@@ -113,7 +113,7 @@ function pagechange(){
     window.open("localware.html","popup");
   }
   else if(select.value=="Sports and outdoors"){
-    window.open("","popup");
+    window.open("sports.html","popup");
   }
   else if(select.value=="Smart home and Garden"){
     window.open("home_garden.html","popup");
@@ -127,7 +127,7 @@ function pagechange2(){
     window.open("localware.html","popup");
   }
   else if(select.value=="Sports and outdoors"){
-    window.open("","popup");
+    window.open("sports.html","popup");
   }
   else if(select.value=="Smart home and Garden"){
     window.open("home_garden.html","popup");
