@@ -116,7 +116,7 @@ function pagechange(){
     window.open("index.html","popup");
   }
   else if(select.value=="Smart home and Garden"){
-    window.open("index.html","popup");
+    window.open("home_garden.html","popup");
   }
 }
 
@@ -130,7 +130,7 @@ function pagechange2(){
     window.open("index.html","popup");
   }
   else if(select.value=="Smart home and Garden"){
-    window.open("index.html","popup");
+    window.open("home_garden.html","popup");
   }
 }
 
