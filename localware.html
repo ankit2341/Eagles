@@ -732,6 +732,7 @@
        </div>
   </footer>
   <!-- -----------------------------------------------onscrolling navbar -------------------------------------------->>
+  
 
 </body>
 </html>
@@ -741,7 +742,7 @@
 <script>
  let Local=JSON.parse(localStorage.getItem("LocalWare"));
 
-let Cartarr=JSON.parse(localStorage.getItem("cartData"))||[]
+
 let arr1=JSON.parse(localStorage.getItem("hello"))||[]
  
       //  <<-------------------------------------------Array Of Objects------------------------------------------------->> 
@@ -1173,9 +1174,17 @@ let arr1=JSON.parse(localStorage.getItem("hello"))||[]
    localware(LocalWareprod)
   }
   // << ---------------------------------------------function for add to cart------------------------------------------->>
+
+  let cartLocalStorage=JSON.parse(localStorage.getItem("cartData"))||[];
     function add(el){
-      Cartarr.push(el)
-      localStorage.setItem("cartData",JSON.stringify(Cartarr))
+      console.log(el);
+
+      let cartobj={td1:el.image,
+				td2:el.DiscountedPrice,td3:"1",td4:"Delete",}
+
+				cartLocalStorage.push(cartobj);
+				localStorage.setItem('cartData', JSON.stringify(cartLocalStorage));
+
     }
 
 </script>
