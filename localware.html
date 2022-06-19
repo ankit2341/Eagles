@@ -995,7 +995,43 @@ let arr1=JSON.parse(localStorage.getItem("hello"))||[]
           category:"Free Shipping only",
           Arrival:"7"
         },
-    ]
+    ];
+
+    function pagechange(){
+  let select=document.querySelector("#top #topsecond #topinput2 #topinput1");
+
+  if(select.value=="All"){
+    window.open("index.html","popup")
+  }
+
+   else if(select.value=="Local Warehouse"){
+    window.open("localware.html","popup");
+  }
+  else if(select.value=="Sports and outdoors"){
+    window.open("sports.html","popup");
+  }
+  else if(select.value=="Smart home and Garden"){
+    window.open("home_garden.html","popup");
+  }
+}
+
+function pagechange2(){
+  let select=document.querySelector("#top #topthird #categories");
+
+  if(select.value=="Categories"){
+    window.open("index.html","popup")
+  }
+
+   else if(select.value=="Local Warehouse"){
+    window.open("localware.html","popup");
+  }
+  else if(select.value=="Sports and outdoors"){
+    window.open("sports.html","popup");
+  }
+  else if(select.value=="Smart home and Garden"){
+    window.open("home_garden.html","popup");
+  }
+}
 
     let productsCont=document.getElementById("cards")
     let checkSell=document.getElementById("CheckboxSell")
