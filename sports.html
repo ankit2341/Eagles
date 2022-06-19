@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sports and Outdoor</title>
+<style>
+    
+/* Slideshow container */
+.slideshow-container {
+      width:80% ;
+      margin: auto;
+      margin-top: 15px;
+      height: 320px;
+}
+h2{
+    margin-top: -70px;
+    margin-left: 140px;
+    color: gray;
+}
+
+#brand{
+    margin: auto;
+     display: flex;
+     margin: auto;
+     justify-content: center;
+}
+#brand>div{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: -5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#brand>div>img{
+    width: 80px;
+    height: 40px;
+    margin: auto;
+    
+}
+#filter{
+    display: flex;
+}
+#filter>h3{
+    margin-left: 140px;
+    color: gray;
+}
+#filter>input{
+    margin-left: 15px;
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    border:transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#main{
+      width: 85%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows:auto;
+      margin: auto;
+      margin-top: 5px;
+      gap: 12px 8px;
+}
+#main>div:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+#main>div>img:nth-child(1){
+    margin-left: 150px;
+}
+
+#main>div>img:nth-child(2){
+    margin-top: -85px;
+
+}
+p{
+    font-size: 20px;
+    margin-top: 0px;
+}
+button{
+    margin-bottom: 10px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <img src="https://img.gkbcdn.com/s3/c/2205/1210x220-628f1cab2b40c90dfc5721c1.jpg">
+ </div>
+
+<div class="mySlides">
+  <img src="https://img.gkbcdn.com/s3/c/2202/1210x220-62149b112b40c921c02dc868.jpg">
+  
+</div>
+
+<div class="mySlides">
+  <img src="https://img.gkbcdn.com/s3/c/2205/ELEGLIDEM1PLUS-627397842b40c937ec3ba657.jpg">
+</div>
+
+<div class="mySlides">
+    <img src="https://img.gkbcdn.com/s3/c/2205/NAVEEN65-628da6102b40c9097c66e5b0.jpg">
+  </div>
+
+  <div class="mySlides">
+    <img src="https://img.gkbcdn.com/s3/c/2205/ESKUTEPOLLUNOPRO-627f645f2b40c90b5ca90596.jpg">
+  </div>
+
+  <div class="mySlides">
+    <img src="https://img.gkbcdn.com/s3/c/2111/HIMOZ201210x220-619f38392b40c901a82b7e5e.jpg">
+  </div>
+
+</div>
+
+<div>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+<h2> Brands</h2>
+<div id="brand">
+   
+<!---Append your brand img here-->
+</div>
+<div id="filter">
+    <h3>Filter:</h3>
+    <input type="text" placeholder="Ship From">
+    <h3>Sort By</h3>
+    <input type="text"  placeholder="Best Match">
+    <input type="text"  placeholder="New Arrival">
+</div>
+
+<div id="main">
+    <!---Append all div here-->
+</div>
+
+</body>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    
+    let brandImg=[
+         
+              {image:"https://img.gkbcdn.com/s3/b/2006/fiido.jpg?v=-674318602"},
+              {image:"https://img.gkbcdn.com/s3/b/ado.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/eleglide.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/Logo/himo.jpg?v=1500289693"},
+              {image:"https://img.gkbcdn.com/s3/b/shengmilo-6TQm5kRs.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/xiaomi.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/avaka-6TQm4QEo.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/Logo/sjcam.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/bezior.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/Logo/oukitel.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/Logo/oukitel.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/engwe.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/kugookirin-6TbAI6pr.jpg"},
+              {image:"https://img.gkbcdn.com/s3/b/Logo/yunmai.jpg"},
+];
+
+brandImg.forEach(function(elem){
+    let box=document.createElement("div");
+
+    let image=document.createElement("img");
+    image.setAttribute("src",elem.image);
+
+    box.append(image);
+    document.querySelector("#brand").append(box);
+})
+
+let data=[
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2019-08-09/kugoo-g-booster-electric-scooter-black-1574132343827._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "KUGOO G-Booster Folding Electric Scooter Dual",
+productID: "product1",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹96332.60",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-plus-upgraded-version-electric-bike-12-5ah-250w-black-258649-1650765309927._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label54.png?20220609",
+pro_title: "ELEGLIDE M1 PLUS Electric Mountain Bike",
+productID: "product2",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹65103.50",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2022-04-24/eleglide-m1-upgraded-version-electric-bike-7-5ah-250w-motor-dark-blue-b23cd2-1650765670228._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "ELEGLIDE M1 Electric Bike Upgraded Version 27.5 ",
+productID: "product3",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹54957.13",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-01/NAVEE--N65-10in-48V-500W-65KM-Mileage-Electric-Scooter-471545-3._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label54.png?20220609",
+pro_title: "NAVEE N65 10-Inch Folding Electric Scooter 500W- Black",
+productID: "product4",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹46418.06",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-02/kugoo-m4-pro-electric-scooter-500w-motor-48v-16ah-battery-55km-range-1630565928120._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "KugooKirin M4 PRO Folding Electric Scooter 10",
+productID: "product5",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹50260.00",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2019-01-30/replacement-36v-6ah-li-battery-for-kugoo-s1-electric-scooter-black-1571990849814._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label28.png?20220609",
+pro_title: "Replacement 36V 6Ah Li Battery For KUGOO S1 Folding Electric Scooter - Black",
+productID: "product6",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62aad8d22b40c919f4829559.gif",
+pro_ico_src: "₹8051.87",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-03/KugooKirin-S1-PRO-8-inches-electric-scooter-471646-0._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "KugooKirin S1 Pro 8 inch Solid Honeycomb Tire Folding Electric- Black",
+productID: "product7",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a898812b40c929fc2ed73e.gif",
+pro_ico_src: "₹22827.74",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2020-08-27/syl-08-electric-skateboard-off-road-with-remote-control-black-1598514023841._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label8.png?20220609",
+pro_title: "SYL-08 V3 Version Electric Off Road Skateboard Max load 130kg - Black",
+productID: "product8",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹37846.79",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-12-29/bogist-c1-pro-folding-electric-scooter-500w-motor-13ah-battery-black-ef2cd9-1640740787540._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label28.png?20220609",
+pro_title: "BOGIST C1 PRO Folding Electric Scooter 10",
+productID: "product9",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹47510.01",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-12-27/kugookirin-g3-electric-scooter-1200w-motor-52v-18ah-battery-217364-1640589906322._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "KUGOO KIRIN G3 Adventurers Electric Scooter- Black",
+productID: "product10",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹87873.26",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2022-06-17/fafrees-f100-26-inch-electric-mountain-bike-350w-motor-11-6ah-black-61d376-1655438808304._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label54.png?20220609",
+pro_title: "FAFREES F100 26 Inch Electric Bike Max Speed 33Km- Black",
+productID: "product11",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹66031.17",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-04-07/himo-z20-folding-electric-bicycle-20-inch-tire-gray-1617790149351._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "HIMO Z20 Folding Electric Bicycle 20 Inch Tire 250W- Gray",
+productID: "product12",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹68446.97",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2020-07-01/kugoo-m4-folding-offroad-electric-scooter-500w-motor-45km-range-1593586327367._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "KugooKirin M4 Folding Electric Offroad Scooter 10",
+productID: "product13",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹41882.79",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-29/KugooKirin-S4-10inches-electric-scooter-Black-472898-0._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label28.png?20220609",
+pro_title: "KugooKirin S4 10 inch Pneumatic Tire- Black",
+productID: "product14",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62aad8d22b40c919f4829559.gif",
+pro_ico_src: "₹31830.63",
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2022-03-01/engwe-engine-pro-folding-electric-bicycle-750w-48v-12-8ah-black-56bb66-1646127110093._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label28.png?20220609",
+pro_title: "ENGWE ENGINE Pro Folding Electric Bicycle- Black",
+productID: "product15",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹120906.96",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-03/KugooKirin-S1-PRO-8-inches-electric-scooter-471646-0._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "JANOBIKE E20 Fat Tire Electric Folding Mountain Bike",
+productID: "product16",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹86162.87",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-29/KugooKirin-S4-10inches-electric-scooter-Black-472898-0._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label8.png?20220609",
+pro_title: "SYL-08 V3 Version Electric Off Road Skateboard- Black",
+productID: "product18",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a898812b40c929fc2ed73e.gif",
+pro_ico_src: "₹38652.06",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-12-29/bogist-c1-pro-folding-electric-scooter-500w-motor-13ah-battery-black-ef2cd9-1640740787540._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "ENGWE EP-2 Pro Folding Electric Bike 2022 Version 20- Black",
+productID: "product19",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a898812b40c929fc2ed73e.gif",
+pro_ico_src: "₹84549.92",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-09-03/KugooKirin-S1-PRO-8-inches-electric-scooter-471646-0._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "FIIDO D2S Folding Moped Electric Bike- Dark Gray",
+productID: "product20",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹52341.61",
+free_ship: false
+},
+{
+lazy_img_src: "https://img.gkbcdn.com/p/2021-10-27/kugoo-s1-plus-electric-scooter-350w-motor-7-5ah-black-1635320207903._w280_p1_.jpg",
+label_img_src: "https://img.gkbcdn.com/s3/l/label/Label68.png?20220609",
+pro_title: "FAFREES F20 Electric Bike 20 Inch Folding- Black",
+productID: "product21",
+pro_ico_href: "https://img.gkbcdn.com/s3/bn/2206/78x24-62a1b8c52b40c9229882fcc0.gif",
+pro_ico_src: "₹74889.12",
+free_ship: false
+},
+
+];
+    
+let CartLS;
+if(JSON.parse(localStorage.getItem("cart-page"))===null){
+    CartLS=[];
+}
+else{
+    CartLS=JSON.parse(localStorage.getItem("cart-page"))
+}
+function displayProduct(dataArr){
+    dataArr.forEach(function(element){
+        let box1=document.createElement("div");
+
+
+        let img=document.createElement("img");
+        img.setAttribute("src",element.lazy_img_src);
+
+        let img2=document.createElement("img");
+        img2.setAttribute("src",element.label_img_src);
+
+    
+
+        let img3=document.createElement("img");
+        img3.setAttribute("src",element.pro_ico_href)
+
+        let name = document.createElement("p")
+      name.innerText = element.pro_title;
+
+      let price = document.createElement("p")
+      price.innerText = element.pro_ico_src;
+
+      let btn=document.createElement("button")
+      btn.innerText="Add to cart";
+
+      btn.addEventListener("click",function(){
+       if( addToCartFun(element.productID)===true){
+        alert("product added successfully");
+        CartLS.push(element);
+        localStorage.setItem("cart-page",JSON.stringify(CartLS));
+       }
+       else{
+           alert("product already in the cart");
+           
+       }
+
+      })
+
+
+
+
+        box1.append(img2,img,img3,name,price,btn)
+        document.querySelector("#main").append(box1);
+    })
+}
+     displayProduct(data)
+
+     function addToCartFun(id){
+  
+  for(let i=0;i<CartLS.length;i++){
+      if(CartLS[i].productID==id){
+          return false;
+      }
+    }
+      
+    return true;
+      
+    
+
+}
+    </script>
+    
+</html> 
