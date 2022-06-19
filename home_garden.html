@@ -38,7 +38,9 @@
 			color: white;
 			height: 40px;
 		}
-
+        .right-container{
+			margin-top: 0px;
+		}
 		.imgcontainer>button:nth-child(2) {
 			right: 2px;
 		}
@@ -49,7 +51,7 @@
 
 		#container {
 			width: 90%;
-			margin: 40px auto;
+			margin: 10px auto;
 			display: flex;
 		}
 
@@ -73,21 +75,23 @@
 		.products {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			gap: 20px;
+			grid-template-rows: repeat(9,500px);
+			gap: 20px 20px;
 		}
 
 		.products>div:hover {
-			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			border: 3px solid #e0e6ef;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 		}
 
 		.box {
 			position: relative;
-			min-width: 250px;
+			width: 350px;
 			padding: 10px;
 			background-color: white;
 			border-radius: 10px;
 			cursor: pointer;
-			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			
 		}
 
 		.box>p {
@@ -95,7 +99,7 @@
 		}
 
 		.show_img {
-			width: 90%;
+			width: 80%;
 			display: block;
 			margin: auto;
 		}
@@ -194,6 +198,27 @@
 		#home:hover {
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		}
+		#addbutton{
+        width: 100px;
+        height: 25px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f));
+        background-image: linear-gradient(to bottom, #318FFB, #06f);
+        border-bottom: 1px solid #5CA4FD;
+        color: #fff;
+        border: none;
+        margin-left:10px ;
+     }
+     #addbutton:hover{
+        color: black;
+        background-color: aquamarine;
+     }
+	 #boxborder{
+        border:1px solid #5CA4FD;
+        border-radius: 15px;
+        
+     }
 	</style>
 
 	<link rel="stylesheet" href="navbar.css">
@@ -383,8 +408,8 @@
 			Why buy form geekbuying ?</h1>
 	</div>
 
-	<div id="subsribe">
-		<input type="email" placeholder="    Enter Email to get 5% off coupon">
+	<div id="subsribe" style="display: flex;align-items:center;justify-content:center">
+		<input type="email" placeholder="Enter Email to get 5% off coupon">
 		<button id="subscribe1" onclick="confirm1()">Subscribe</button>
 	</div>
 
@@ -531,7 +556,8 @@
 		data.forEach(function (element) {
 			console.log(element);
 			let box = document.createElement("div")
-			box.classList.add("box")
+			box.classList.add("box");
+			box.setAttribute("id","boxborder");
 
 			let image = document.createElement("img")
 			image.classList.add('show_img')
@@ -576,8 +602,7 @@
 			favourite.append(favourite_heart, favourite_count)
 			let button = document.createElement("button")
 			button.innerText = "Add To Cart"
-			button.style.backgroundColor = "#3949ab"
-			button.style.cursor = "pointer"
+			button.setAttribute("id","addbutton");
 			button.addEventListener("click", function () {
 				alert("Added");
 				element.quantity = 1

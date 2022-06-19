@@ -17,7 +17,22 @@
         font-size: 14px;
     }
     
-
+    #addbutton{
+        width: 100px;
+        height: 25px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#318FFB), to(#06f));
+        background-image: linear-gradient(to bottom, #318FFB, #06f);
+        border-bottom: 1px solid #5CA4FD;
+        color: #fff;
+        border: none;
+        margin-left:10px ;
+     }
+     #addbutton:hover{
+        color: black;
+        background-color: aquamarine;
+     }
     /* -------------------------------------header----------------------------------------------------- */
 
     #language{
@@ -170,10 +185,12 @@
     #container>div:nth-child(1){
       
         width: 20%;
+        margin-top: 20px;
         padding-left: 20px;
     }
     .Local{
         padding: 20px;
+        margin-top: 20px;
         border: 1px solid rgb(196, 200, 206);
     }
     .Local > p{
@@ -429,6 +446,11 @@
         width: 90%;
         height: 40px;
     }
+    #boxborder{
+        border:1px solid #5CA4FD;
+        border-radius: 15px;
+        /* box1.setAttribute("id","boxborder"); */
+     }
   
   </style>
    
@@ -1051,6 +1073,9 @@ function pagechange2(){
       LocalWareprod.forEach(function(el){
         // creating child box
         let box=document.createElement("div");
+       
+         box.setAttribute("id","boxborder"); 
+    
         // creating img element
         let pic= document.createElement("img");
         pic.setAttribute("src",el.image);
@@ -1071,6 +1096,7 @@ function pagechange2(){
         Price.style.fontSize="18px"
         // create button
         let Add=document.createElement("button");
+        Add.setAttribute("id","addbutton")
         Add.innerText=el.Button;
         Add.addEventListener("click", function(){
       //  console.log(el)
