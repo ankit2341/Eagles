@@ -134,6 +134,20 @@ function pagechange2(){
   }
 }
 
+function pagechange3(){
+  let select=document.querySelector("#top #topsecond2 #topinput2 #topinput1");
+
+  if(select.value=="Local Warehouse"){
+    window.open("localware.html","popup");
+  }
+  else if(select.value=="Sports and outdoors"){
+    window.open("sports.html","popup");
+  }
+  else if(select.value=="Smart home and Garden"){
+    window.open("home_garden.html","popup");
+  }
+}
+
 
 
 // --------------------------------------------------onscrolling navbar----------------------------------------------------------
