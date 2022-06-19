@@ -527,6 +527,7 @@
 		products.innerHTML = null
 
 		data.forEach(function (element) {
+			console.log(element);
 			let box = document.createElement("div")
 			box.classList.add("box")
 
@@ -577,7 +578,11 @@
 			button.style.cursor = "pointer"
 			button.addEventListener("click", function () {
 				element.quantity = 1
-				cartLocalStorage.push(element)
+
+				let cartobj={td1:element.lazy_img_src,
+				td2:element.price,td3:"1",td4:"Delete",}
+
+				cartLocalStorage.push(cartobj)
 				localStorage.setItem('cartData', JSON.stringify(cartLocalStorage));
 
 			})
