@@ -518,7 +518,7 @@
 		img.src = imgarray[imgnum]
 	})
 
-	let cartLocalStorage = JSON.parse(localStorage.getItem("addcart")) || []
+	let cartLocalStorage = JSON.parse(localStorage.getItem("cartData")) || []
 
 	displayproducts(data);
 
@@ -578,7 +578,7 @@
 			button.addEventListener("click", function () {
 				element.quantity = 1
 				cartLocalStorage.push(element)
-				localStorage.setItem('addcart', JSON.stringify(cartLocalStorage));
+				localStorage.setItem('cartData', JSON.stringify(cartLocalStorage));
 
 			})
 
