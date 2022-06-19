@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        #container>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 20px 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+  let cartArrfromM=JSON.parse(localStorage.getItem("cartData"))||[];
+  let BUy=JSON.parse(localStorage.getItem("BUY"))||[];
+
+  cartArrfromM.forEach(function(el){
+    let box=document.createElement("div");
+    // creating img element
+    let pic= document.createElement("img");
+    pic.setAttribute("src",el.image_url);
+    let Name=document.createElement("p");
+       Name.innerText=el.name;
+    let Price=document.createElement("p");
+       Price.innerText=el.price;
+    let Strikedoffprice =document.createElement("p");
+     Strikedoffprice.innerText=el.strikedoffprice;
+     let Add=document.createElement("button");
+     Add.innerText="BUY"
+     Add.addEventListener("click", function(){
+        BUy.push(el)
+         localStorage.setItem("BUY",JSON.stringify(BUy))
+         window.location.href="payment.html"
+     })
+    box.append(pic,Name,Price,Strikedoffprice,Add);
+    document.querySelector("#container").append(box)
+})
+</script>
